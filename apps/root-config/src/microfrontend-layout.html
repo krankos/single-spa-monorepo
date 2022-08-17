@@ -1,0 +1,52 @@
+<single-spa-router>
+    <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+    <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+
+    <main>
+        <nav>
+            <a href="/"><button>Home</button></a>
+            <a href="/react"><button>React</button></a>
+            <a href="/vue"><button>Vue3</button></a>
+            <a href="/vue2"><button>Vue2</button></a>
+            <a href="/angular"><button>Angular</button></a>
+            <a href="/angular2"><button>SPA Angular</button></a>
+            <a href="/svelte"><button>Svelte</button></a>
+        </nav>
+        <route default>
+            <application name="@single-spa/welcome"></application>
+        </route>
+        <route path="/react">
+            <application name="@org/react"></application>
+        </route>
+        <route path="/vue">
+            <application name="@org/vue"></application>
+        </route>
+        <route path="/angular">
+            <application name="@angular/angular"></application>
+        </route>
+        <route path="/angular2">
+            <application name="@ang2/angularSPA"></application>
+        </route>
+        <route path="/svelte">
+            <application name="@org/svelte"></application>
+        </route>
+        <route path="/vue2">
+            <application name="@org/vue2"></application>
+        </route>
+    </main>
+</single-spa-router>
